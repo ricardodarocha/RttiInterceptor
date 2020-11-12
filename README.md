@@ -32,12 +32,12 @@ begin
   Memo1.Clear;
   TRttiInterceptor<TOrder>.MapField(Order, procedure (aField: TRttiField)
      begin
-       Memo1.lines.Add('Field :' + aField.Name);
+       Memo1.lines.Add('Field :' + aField.Name + ' = ' + aField.GetValue(Order).ToString);
      end);  
 
   TRttiInterceptor<TOrder>.MapProperty(Order, procedure (aProperty: TRttiProperty)
      begin
-       Memo1.lines.Add('Property :' + aProperty.Name);
+       Memo1.lines.Add('Property :' + aProperty.Name + ' = ' + aProperty.GetValue(Order).ToString);
      end);
 );
 end;
