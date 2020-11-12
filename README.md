@@ -1,4 +1,4 @@
-# RttiInterceptor
+# Rtti Interceptor
 A Rtti facilitator to access fields and properties of an object
 
 # Declare a Type
